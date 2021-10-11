@@ -3,7 +3,36 @@
     margin: auto;
 
     .card-left-wing {
-        
+        display: flex;
+        flex-direction: column;
+        border: solid black;
+        max-width: 35rem;
+
+        h2 {
+            font-weight: bold;
+            font-size: 26px;
+            margin-top: 0.5rem;
+            margin-left: 0.3rem;
+        }
+
+        .card-bar{
+            display: flex;
+            justify-content: space-between;
+            border-top: black solid 0.5px;
+            border-bottom: black solid 0.5px;
+            margin-top: 10px;
+            padding-right: 0.5rem;
+            padding-top: 0.2rem;
+            height: 1.5rem;
+
+            .levels {
+                display: flex;
+                img{
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+        }
     }
     .card-right-wing {
         img {

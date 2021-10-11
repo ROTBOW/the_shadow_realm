@@ -11,8 +11,6 @@ const ShowCard = (props) => {
         .then(res => setCard(res.data.data[0]))
     }, [])
 
-    console.log(card)
-    window.card = card;
     if (card != undefined){
         return <Card cardData={card}/>
     } else {
