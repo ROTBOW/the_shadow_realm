@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && http-server",
+    "start": "webpack",
     "build": "webpack --watch --mode=development"
   },
   "repository": {
@@ -27,11 +27,16 @@
     "babel-loader": "^8.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.0",
     "webpack": "^5.58.1"
   },
   "devDependencies": {
+    "css-loader": "^6.4.0",
     "http-server": "^13.0.2",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.3.0",
     "webpack-cli": "^4.9.0"
   }
 }

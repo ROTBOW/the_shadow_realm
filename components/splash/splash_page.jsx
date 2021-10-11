@@ -1,13 +1,14 @@
 import React from 'react';
+import './splash.scss'
 
 
 const Splash = () => {
 
 
     return (
-        <div>
+        <h1 className='splash'>
             why hello there friend :)
-        </div>
+        </h1>
     )
 
 }
