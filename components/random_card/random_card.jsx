@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Loading from '../loading/loading'
-import Card from '../show_card/show_card'
+import Card from '../card/card'
 import axios from 'axios'
 
 const RandomCard = () => {

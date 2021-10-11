@@ -1,24 +1,23 @@
-import React from 'react';
-import './show_card.scss';
+import React, {useEffect, useState} from 'react'
+import Loading from '../loading/loading'
+import Card from '../card/card'
+import axios from 'axios'
 
-const Card = (props) => {
-    const card = props.cardData;
+const ShowCard = (props) => {
+    const [card, setCard] = useState();
+
+    useEffect(() => {
+        axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?id=${props.match.params.id}`)
+        .then(res => setCard(res.data.data[0]))
+    }, [])
+
+    console.log(card)
     window.card = card;
-    // ● src={card.card_images[0].image_url}
-
-    return (
-        <div className="card-data-container">
-            <div className="card-left-wing">
-                <h2>{card.name}</h2>
-                <h3>{card.type} {card.level}</h3>
-                <p>{card.desc}</p>
-            </div>
-            <div className="card-right-wing">
-                <img src={card.card_images[0].image_url} alt={card.name}/>
-            </div>
-        </div>
-    )
-
+    if (card != undefined){
+        return <Card cardData={card}/>
+    } else {
+        return <Loading/>
+    }
 }
 
-export default Card;
+export default ShowCard;
