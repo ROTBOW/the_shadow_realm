@@ -6,6 +6,7 @@ import Splash from './splash/splash_page';
 import Card_Index from './cards_index/cards_index';
 import RandomCard from './random_card/random_card';
 import ShowCard from './show_card/show_card';
+import Jimbo from './jimbo/jimbo';
 
 
 class App extends React.Component {
@@ -15,6 +16,7 @@ class App extends React.Component {
                 <div>      
                     <Navbar data={undefined}/>
                     <Switch>
+                        <Route path='/jimbo' component={Jimbo}/>
                         <Route path='/random' component={RandomCard}/>
                         <Route path='/cards/:id' component={ShowCard}/>
                         <Route path='/cards' component={Card_Index}/>

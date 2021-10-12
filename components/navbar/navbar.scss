@@ -1,13 +1,18 @@
 .navbar {
-    height: 1.3rem;
+    height: 2rem;
     display: flex;
     justify-content: space-between;
     padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    border-bottom: black solid 1px;
+    background-color: #b55527;
 
     button {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
-        background-color: grey;
-        padding: 0.1rem;
+        background-color: white;
+        padding: 0.3rem;
+        border: black solid 0.5px;
+        cursor: pointer;
     }
 }
