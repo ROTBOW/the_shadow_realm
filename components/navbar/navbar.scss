@@ -1,0 +1,13 @@
+.navbar {
+    height: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.1rem;
+
+    button {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        background-color: grey;
+        padding: 0.1rem;
+    }
+}

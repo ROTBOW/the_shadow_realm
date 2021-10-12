@@ -2,17 +2,29 @@
     display: flex;
     margin: auto;
 
+    // position: relative;
+    // left: 15px;
+
     .card-left-wing {
         display: flex;
         flex-direction: column;
         border: solid black;
-        max-width: 35rem;
-
+        min-width: 35rem;
+        max-width: 40rem;
+        
         h2 {
-            font-weight: bold;
+            max-width: fit-content;
+            // font-weight: bold;
             font-size: 26px;
             margin-top: 0.5rem;
-            margin-left: 0.3rem;
+            margin-left: 0.5rem;
+            white-space: nowrap;
+
+            i {
+                font-family: 'Open Sans', Inter;
+                font-size: 19px;
+                border-bottom: black solid 1px;
+            }
         }
 
         .card-bar{
@@ -20,10 +32,12 @@
             justify-content: space-between;
             border-top: black solid 0.5px;
             border-bottom: black solid 0.5px;
-            margin-top: 10px;
+            margin-top: 0.9rem;
             padding-right: 0.5rem;
+            padding-left: 0.5rem;
             padding-top: 0.2rem;
             height: 1.5rem;
+            white-space: nowrap;
 
             .levels {
                 display: flex;
@@ -33,13 +47,21 @@
                 }
             }
         }
+
+        p {
+            padding-left: 0.5rem;
+            padding-top: 1rem;
+            //    text-align: justify;
+           
+        }
+
     }
     .card-right-wing {
         img {
             width: 337px;
             height: 491px;
             border: black solid 1px;
-            margin-right: 15px;
+            // margin-right: 15px;
         }
     }
 }
