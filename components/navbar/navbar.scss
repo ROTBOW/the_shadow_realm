@@ -14,5 +14,12 @@
         padding: 0.3rem;
         border: black solid 0.5px;
         cursor: pointer;
+
+        transition: all 500ms;
+
+        &:hover{
+            border-radius: 25%;
+            background-color: #e8ccbf;
+        }
     }
 }

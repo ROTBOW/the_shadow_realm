@@ -12,6 +12,25 @@ const fillLvl = level => {
     return levels;
 }
 
+const formatDesc = desc => {
+    let answer = [];
+    let tempStr = ''
+    for (let i = 0; i < desc.length; i++) {
+        let letter = desc[i];
+        if (letter != '●'){
+            tempStr += letter
+        } else {
+            answer.push(tempStr);
+            answer.push(<br key={i}/>)
+            tempStr = '●';
+
+        }
+    }
+    answer.push(tempStr)
+
+    return answer;
+}
+
 const Card = (props) => {
     const card = props.cardData;
     let levels = fillLvl(card.level)
@@ -37,7 +56,7 @@ const Card = (props) => {
                 <div className="card-bar">
                     {cardBar}
                 </div>
-                <p>{card.desc}</p>
+                <p>{formatDesc(card.desc)}</p>
             </div>
             <div className="card-right-wing">
                 <img src={card.card_images[0].image_url} alt={card.name}/>
