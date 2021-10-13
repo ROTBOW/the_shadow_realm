@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from '../image/image';
 import './card.scss';
 
 const fillLvl = level => {
@@ -59,7 +60,13 @@ const Card = (props) => {
                 <p>{formatDesc(card.desc)}</p>
             </div>
             <div className="card-right-wing">
-                <img src={card.card_images[0].image_url} alt={card.name}/>
+                {/* <img src={card.card_images[0].image_url} alt={card.name}/> */}
+                <div className="card-image">
+                    <Image
+                        imageUrl={card.card_images[0].image_url}
+                        imageName={card.name}
+                        />
+                </div>
             </div>
         </div>
     )
