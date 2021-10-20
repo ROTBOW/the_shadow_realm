@@ -1,17 +1,18 @@
 import React from 'react'
-import { withRouter } from 'react-router'
+import { useHistory } from 'react-router'
 import './navbar.scss'
 
 const Navbar = (props) => {
+    const history = useHistory()
 
     const sendHome = (e) => {
         e.preventDefault()
-        props.history.replace('/')
+        history.replace('/')
     }
     const sendHere = (loca) => {
         return e => {
             e.preventDefault()
-            props.history.replace(`${loca}`)
+            history.replace(`${loca}`)
         }
     }
 
@@ -27,4 +28,4 @@ const Navbar = (props) => {
     )
 }
 
-export default withRouter(Navbar);
+export default Navbar;

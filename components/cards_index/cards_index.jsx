@@ -1,20 +1,45 @@
 import React, { useEffect, useState } from "react";
-import Loading from '../loading/loading'
-import axios from 'axios'
+import './cards_index.scss';
+import Loading from '../loading/loading';
+import CardItem from './card_item';
+import axios from 'axios';
 
 const Card_Index = () => {
 
-    const [card, setCard] = useState();
+    const [meta, setMeta] = useState();
+    const [cards, setCards] = useState();
+    const [api, setApi] = useState('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
 
-    useEffect(() => {
-        axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php')
-            .then(res => setCard(res.data))
-        }, [])
+    // useEffect(() => {
+    //     axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php')
+    //         .then(res => setCard(res.data))
+    //     }, [])
 
-    if (card != undefined) {
+    useEffect(()=>{
+        axios.get(api)
+            .then(res => {
+                setCards(res.data.data)
+                setMeta(res.data.meta)
+            })
+    },[api])
+
+
+    if (cards != undefined) {
+        let cardItems = []
+        for (let i = 0; i < cards.length;i++ ) {
+            cardItems.push(
+                <CardItem
+                    card={cards[i]}
+                    key={i}
+                />)
+        }
         return (
-            <div>
-                well well well, this is a lot of cards huh? {card.name}
+            <div className="cards-index">
+                <div className="cards-index-container">
+                    {cardItems}
+                </div>
+                <button>button</button>
+                <button>button</button>
             </div>
         )
     } else {
