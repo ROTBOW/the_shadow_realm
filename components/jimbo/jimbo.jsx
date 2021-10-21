@@ -13,7 +13,7 @@ const Jimbo = () => {
                 src={'../../assets/imgs/Jimbo.jpg'}
                 alt='Jimbo Easter Egg'
             />
-            <button onClick={playAudio}>go on, click me</button>
+            <button id="btnSound" onClick={playAudio}>Play Audio</button>
         </div>
     )
 }

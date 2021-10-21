@@ -13,7 +13,7 @@ const CardItem = (props) => {
 
     return (
         <div className="card-item" onClick={handleClick}>
-            <p>{card.name} <br/> {card.type}</p>
+            <p>{card.name} <br/> <i>{card.type}</i></p>
         </div>
     )
 }
