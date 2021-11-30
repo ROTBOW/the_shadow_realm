@@ -23,6 +23,15 @@ const Card_Index = () => {
             })
     },[api])
 
+    const nextPage = () => {
+        setApi(meta.next_page)
+    }
+
+    const lastPage = () => {
+        if (meta.previous_page != undefined) {
+            setApi(meta.previous_page)
+        }
+    }
 
     if (cards != undefined) {
         let cardItems = []
@@ -38,8 +47,8 @@ const Card_Index = () => {
                 <div className="cards-index-container">
                     {cardItems}
                 </div>
-                <button>button</button>
-                <button>button</button>
+                <button onClick={lastPage}>Last</button>
+                <button onClick={nextPage}>Next</button>
             </div>
         )
     } else {
