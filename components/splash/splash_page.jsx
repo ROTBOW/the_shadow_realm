@@ -18,14 +18,16 @@ const Splash = () => {
     
     useEffect(()=> {
         timerId = setInterval(()=>{
-            setAngl( angl => (angl < 1440) ? angl+180: 0 );
-            console.log(angl => (angl));
-            if ([0, 180, 360, 720, 1400].includes(angl => angl)) {
+            let time;
+            setAngl( angl => {
+                time = (angl < 1440) ? angl+180: 0
+                return time
+            });
+            if (![360, 720, 1080,1440].includes(time)) {
                 setFlip(flip => !flip);
             }
             
-            // setAngl( angl => (angl < 540) ? angl+180: 0 );
-        }, 5000);
+        }, 2500);
 
         return () => clearInterval(timerId)
     }, [])
@@ -34,10 +36,15 @@ const Splash = () => {
     if (card != undefined) {
         let cardImg = card.card_images[0].image_url
         return (
-            <h1 className='splash'>
+        <h1 className='splash'>
             <div className='center-box'>
-                Welcome to the Shadow Realm
-
+                <div className="splash-text-box">
+                    <h2>Welcome to the Shadow Realm</h2>
+                    <p>
+                        The Shadow Realm is a Yu-Gi-Oh card repository made possible
+                        by the <a href='https://db.ygoprodeck.com/'>YGOPRODeck</a> API.
+                    </p>
+                </div>
                 <div className="splash-card-container">
                     <div className="splash-card-container-inner" style={{transform: `rotateY(${angl}deg)`}}>
                         <div className='splash-card-front'>

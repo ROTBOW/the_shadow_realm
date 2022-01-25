@@ -1,12 +1,12 @@
 .splash {
 
-
+    display: flex;
+    justify-content: center;
 
     .splash-card-container {
         background-color: transparent;
         width: 20rem;
         height: auto;
-        // border: 1px solid black;
         perspective: 1000px;
     }
 
@@ -18,10 +18,6 @@
         transition: transform 2s;
         transform-style: preserve-3d;
     }
-    
-    // .splash-card-container:hover .splash-card-container-inner {
-    //     transform: rotateY(180deg);
-    // }
 
     .splash-card-front, .splash-card-back {
         position: absolute;
@@ -35,9 +31,36 @@
         transform: rotateY(180deg);
     }
 
-}
 
+    .center-box{
+        margin-top: 6rem;
+        display: flex;
+        h2{
+            // font-weight: bold;
+            text-decoration: underline;
+            font-style: italic;
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+            &:hover {
+                color: darkblue;
+            }
+        }
 
-.flip {
-    transform: rotateY(180deg);
+        p {
+            width: 30rem;
+        }
+
+        .splash-text-box {
+            margin-right: 2.5rem;
+        }
+
+        .splash-card-container {
+            margin-left: 2.5rem;
+        }
+    }
+
 }
