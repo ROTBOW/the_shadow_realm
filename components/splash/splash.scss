@@ -1,3 +1,43 @@
 .splash {
-    color: red;
+
+
+
+    .splash-card-container {
+        background-color: transparent;
+        width: 20rem;
+        height: auto;
+        // border: 1px solid black;
+        perspective: 1000px;
+    }
+
+    .splash-card-container-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 2s;
+        transform-style: preserve-3d;
+    }
+    
+    // .splash-card-container:hover .splash-card-container-inner {
+    //     transform: rotateY(180deg);
+    // }
+
+    .splash-card-front, .splash-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .splash-card-back {
+        transform: rotateY(180deg);
+    }
+
+}
+
+
+.flip {
+    transform: rotateY(180deg);
 }
