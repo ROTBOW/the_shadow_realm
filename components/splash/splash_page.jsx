@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from 'react-router';
 import Loading from '../loading/loading'
 import axios from "axios";
 import './splash.scss'
@@ -8,6 +9,7 @@ const Splash = () => {
     const [card, setCard] = useState();
     const [flip, setFlip] = useState(false);
     const [angl, setAngl] = useState(0);
+    const history = useHistory();
     let timerId;
 
     useEffect(() => {
@@ -32,6 +34,11 @@ const Splash = () => {
         return () => clearInterval(timerId)
     }, [])
 
+    const goToCard = (e) => {
+        e.preventDefault();
+        history.push(`cards/${card.id}`)
+    }
+
     
     if (card != undefined) {
         let cardImg = card.card_images[0].image_url
@@ -48,7 +55,8 @@ const Splash = () => {
                 <div className="splash-card-container">
                     <div className="splash-card-container-inner" style={{transform: `rotateY(${angl}deg)`}}>
                         <div className='splash-card-front'>
-                            <img src={cardImg}/>
+                            <img src={cardImg}
+                                onClick={goToCard}/>
                         </div>
                         <div className='splash-card-back'>
                             <img src={'../../assets/imgs/card_back.jpg'}/>

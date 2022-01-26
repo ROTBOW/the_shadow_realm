@@ -27,6 +27,10 @@
         -webkit-backface-visibility: hidden;
     }
 
+    .splash-card-front {
+        cursor: pointer;
+    }
+
     .splash-card-back {
         transform: rotateY(180deg);
     }
