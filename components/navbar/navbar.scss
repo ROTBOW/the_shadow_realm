@@ -1,11 +1,19 @@
 .navbar {
-    height: 2rem;
+    height: 3rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
     border-bottom: black solid 1px;
-    background-color: #b55527;
+    background-color: #555250;
+
+    h1 {
+        cursor: pointer;
+        color: lightgray;
+        font-style: italic;
+        margin-left: 0.5rem;
+    }
 
     button {
         margin-left: 0.5rem;
@@ -19,7 +27,7 @@
 
         &:hover{
             border-radius: 25%;
-            background-color: #e8ccbf;
+            background-color: #b6b4b3;
         }
     }
 }
