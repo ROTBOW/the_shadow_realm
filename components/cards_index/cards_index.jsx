@@ -10,11 +10,6 @@ const Card_Index = () => {
     const [cards, setCards] = useState();
     const [api, setApi] = useState('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
 
-    // useEffect(() => {
-    //     axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php')
-    //         .then(res => setCard(res.data))
-    //     }, [])
-
     useEffect(()=>{
         axios.get(api)
             .then(res => {
@@ -33,6 +28,16 @@ const Card_Index = () => {
         }
     }
 
+    const changePage = direction => {
+        return (e) => {
+            if (direction === 'back' && meta.previous_page != undefined) {
+                setApi(meta.previous_page)
+            } else if (direction === 'next') {
+                setApi(meta.next_page)
+            }
+        }
+    }
+
     if (cards != undefined) {
         let cardItems = []
         for (let i = 0; i < cards.length;i++ ) {
@@ -47,8 +52,10 @@ const Card_Index = () => {
                 <div className="cards-index-container">
                     {cardItems}
                 </div>
-                <button onClick={lastPage}>Last</button>
-                <button onClick={nextPage}>Next</button>
+                <div className="cards-index-buttons">
+                    <button onClick={changePage('back')}>Last</button>
+                    <button onClick={changePage('next')}>Next</button>
+                </div>
             </div>
         )
     } else {

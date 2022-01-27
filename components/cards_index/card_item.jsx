@@ -13,6 +13,7 @@ const CardItem = (props) => {
 
     return (
         <div className="card-item" onClick={handleClick}>
+            <img src={card.card_images[0].image_url}/>
             <p>{card.name} <br/> <i>{card.type}</i></p>
         </div>
     )
