@@ -9,13 +9,19 @@ const Navbar = (props) => {
 
     const sendHere = (loca) => {
         return e => {
-            e.preventDefault()
+            e.preventDefault();
             if (loca === '/random' && local['pathname'] === '/random') {
                 history.go(0);
             } else {
                 history.replace(`${loca}`)
             }
         }
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target[0].value);
+        sendHere(`search/${e.target[0].value}`)
     }
 
     return (
@@ -26,7 +32,9 @@ const Navbar = (props) => {
                 <button onClick={sendHere('/cards')}>All Cards</button>
                 <button onClick={sendHere('/random')}>Random</button>
             </div>
-            <div></div>
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="seach" className='search'/>
+            </form>
         </div>
     )
 }
