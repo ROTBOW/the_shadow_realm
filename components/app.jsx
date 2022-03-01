@@ -21,7 +21,7 @@ class App extends React.Component {
                         <Route path='/random' component={RandomCard}/>
                         <Route path='/cards/:id' component={ShowCard}/>
                         <Route path='/cards' component={Card_Index}/>
-                        <Route path='/search/:searchWords' component={Search}/>
+                        {/* <Route path='/search/:searchWords' component={Search}/> */}
                         <Route path='/splash' component={Splash}/>
                         <Redirect to='/splash' />
                     </Switch>

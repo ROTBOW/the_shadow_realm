@@ -9,7 +9,7 @@ const ShowCard = (props) => {
     useEffect(() => {
         axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?id=${props.match.params.id}`)
         .then(res => setCard(res.data.data[0]))
-    }, [])
+    }, [props.match.params.id])
 
     if (card != undefined){
         return <Card cardData={card}/>

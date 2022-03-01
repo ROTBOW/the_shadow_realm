@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { useLocation } from 'react-router';
+import Search from '../search/search';
 import './navbar.scss';
 
 const Navbar = (props) => {
     const history = useHistory();
     const local = useLocation();
+    const [search, setSearch] = useState('');
+
 
     const sendHere = (loca) => {
         return e => {
@@ -18,10 +21,16 @@ const Navbar = (props) => {
         }
     }
 
-    const handleSubmit = (e) => {
+    const clearSearch = () => {
+        // console.log('clear console from navbar');
+        setSearch('')
+
+    }
+
+    const handleChange = (e) => {
         e.preventDefault();
-        console.log(e.target[0].value);
-        sendHere(`search/${e.target[0].value}`)
+        // console.log(e.target.value);
+        setSearch(e.target.value)
     }
 
     return (
@@ -32,9 +41,17 @@ const Navbar = (props) => {
                 <button onClick={sendHere('/cards')}>All Cards</button>
                 <button onClick={sendHere('/random')}>Random</button>
             </div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="seach" className='search'/>
-            </form>
+            <div>
+                <input
+                    type="text"
+                    name="search"
+                    className='search'
+                    onChange={handleChange}
+                />
+                {
+                  (search != '') ? <Search term={search} clear={clearSearch} /> : ''
+                }
+            </div>
         </div>
     )
 }

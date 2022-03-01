@@ -1,0 +1,18 @@
+.search-container {
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    background-color: rgb(100, 100, 100);
+    z-index: 5;
+    margin: 0.3rem 0 0 0.05rem;
+    padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+    border-radius: 0 0 5% 5%;
+    border: solid black 2px;
+    width: 10.5rem;
+
+    .search-item {
+        display: flex;
+        font-size: 15px;
+        overflow-wrap: break-word;
+    }
+}
