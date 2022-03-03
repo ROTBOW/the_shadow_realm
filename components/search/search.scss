@@ -14,5 +14,14 @@
         display: flex;
         font-size: 15px;
         overflow-wrap: break-word;
+        padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+        border-bottom: 1px solid grey;
+        cursor: pointer;
+
+
+        transition: color 500ms;
+        &:hover {
+            color: rgb(180, 180, 180);
+        }
     }
 }
