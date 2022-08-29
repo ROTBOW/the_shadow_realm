@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from 'react-router';
 import Loading from '../loading/loading'
 import axios from "axios";
-import './splash.scss'
+import './splash.scss';
 
 
 const Splash = () => {
@@ -25,7 +25,7 @@ const Splash = () => {
                 time = (angl < 1440) ? angl+180: 0
                 return time
             });
-            if (![360, 720, 1080,1440].includes(time)) {
+            if (![360, 720, 1080, 1440].includes(time)) {
                 setFlip(flip => !flip);
             }
             
