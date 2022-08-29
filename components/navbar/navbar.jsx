@@ -39,7 +39,7 @@ const Navbar = (props) => {
             <div>
                 <button onClick={sendHere('/')}>Home</button>
                 <button onClick={sendHere('/cards')}>All Cards</button>
-                <button onClick={sendHere('/random')}>Random</button>
+                <button onClick={sendHere('/random')}Random</button>
             </div>
             <div>
                 <input

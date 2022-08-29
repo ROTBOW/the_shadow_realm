@@ -5,7 +5,7 @@ import './card.scss';
 const fillLvl = level => {
     let levels = []
     for (let i = 0; i < level; i++){
-        levels.push(<img src={'../../assets/level_star.png'}
+        levels.push(<img src={'../../assets/levelStar.png'}
                          key={i}
                          title={`Level ${level}`}
                          />)
@@ -60,7 +60,6 @@ const Card = (props) => {
                 <p>{formatDesc(card.desc)}</p>
             </div>
             <div className="card-right-wing">
-                {/* <img src={card.card_images[0].image_url} alt={card.name}/> */}
                 <div className="card-image">
                     <Image
                         imageUrl={card.card_images[0].image_url}

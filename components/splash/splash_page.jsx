@@ -36,7 +36,7 @@ const Splash = () => {
 
     const goToCard = (e) => {
         e.preventDefault();
-        history.push(`cards/${card.id}`)
+        history.push(`cards/${card.Id}`)
     }
 
     
