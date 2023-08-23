@@ -5,7 +5,7 @@ import './card.scss';
 const fillLvl = level => {
     let levels = []
     for (let i = 0; i < level; i++){
-        levels.push(<img src={'../../assets/level_star.png'}
+        levels.push(<img src={'../../assets/imgs/level_star.png'}
                          key={i}
                          title={`Level ${level}`}
                          />)
