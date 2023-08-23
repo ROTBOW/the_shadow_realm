@@ -5,7 +5,10 @@ import { GiCardExchange } from "react-icons/gi";
 class Loading extends React.Component {
     render(){
         return (
-            <div className="loading">Loading...<GiCardExchange/></div>
+            <div className="loading">
+                <GiCardExchange/>
+                <p>Loading...</p>
+            </div>
         )
     }
 }
