@@ -1,5 +1,4 @@
 const path = require("path");
-const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 module.exports = {
     entry: "./entry.jsx",
@@ -7,19 +6,7 @@ module.exports = {
         path: path.resolve(__dirname),
         filename: 'bundle.js'
     },
-    plugins: [
-        new StaticSiteGeneratorPlugin({
-            paths: [
-            '/hello/',
-            '/world/'
-            ],
-            locals: {
-            // Properties here are merged into `locals`
-            // passed to the exported render function
-            greet: 'Hello'
-            }
-        })
-    ],
+    plugins: [],
     devtool: 'source-map',
     resolve: {
         extensions: ['.js', '.jsx', '.*']
