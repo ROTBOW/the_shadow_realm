@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import Loading from '../loading/loading'
 import axios from "axios";
 import './splash.scss';
@@ -9,7 +9,7 @@ const Splash = () => {
     const [card, setCard] = useState();
     const [flip, setFlip] = useState(false);
     const [angl, setAngl] = useState(0);
-    const history = useHistory();
+    const navi = useNavigate();
     let timerId;
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const Splash = () => {
 
     const goToCard = (e) => {
         e.preventDefault();
-        history.push(`cards/${card.id}`)
+        navi(`cards/${card.id}`)
     }
 
     

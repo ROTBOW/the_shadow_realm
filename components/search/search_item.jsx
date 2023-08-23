@@ -1,14 +1,14 @@
 import React from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 
 const SearchItem = (props) => {
-    const history = useHistory();
+    const navi = useNavigate();
 
 
     const handleClick = (e) => {
         e.preventDefault();
         props.clear()
-        history.replace(`/cards/${props.card.id}`)
+        navi(`/cards/${props.card.id}`)
     }
 
     // console.log(props.card)

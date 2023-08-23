@@ -1,9 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Root from '/components/root';
+import { createRoot } from 'react-dom/client';
+
 import './styles/index.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
-    let root = document.getElementById('root');
-    ReactDOM.render(<Root/>, root);
+    const contan = document.getElementById('root');
+    const root = createRoot(contan);
+    root.render(<Root/>)
 })

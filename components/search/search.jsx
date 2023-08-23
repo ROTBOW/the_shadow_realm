@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import SearchItem from './search_item'
 import axios from 'axios';
 import './search.scss';
 
 const Search = (props) => {
     const [cards, setCards] = useState(null);
-    const history = useHistory();
+    const navi = useNavigate();
 
     useEffect(() => {
         axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0&fname=${props.term}`)

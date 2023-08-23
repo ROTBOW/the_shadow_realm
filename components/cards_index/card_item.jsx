@@ -1,14 +1,14 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import './card_item.scss';
 
 const CardItem = (props) => {
     const card = props.card;
-    const history = useHistory();
+    const navi = useNavigate();
 
     const handleClick = (e) => {
         e.preventDefault();
-        history.push(`cards/${card.id}`)
+        navi(`cards/${card.id}`)
     }
 
     return (

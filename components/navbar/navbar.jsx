@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router';
 import Search from '../search/search';
 import './navbar.scss';
 
 const Navbar = (props) => {
-    const history = useHistory();
+    const navi = useNavigate();
     const local = useLocation();
     const [search, setSearch] = useState('');
 
@@ -14,9 +14,9 @@ const Navbar = (props) => {
         return e => {
             e.preventDefault();
             if (loca === '/random' && local['pathname'] === '/random') {
-                history.go(0);
+                navi(0);
             } else {
-                history.replace(`${loca}`)
+                navi(`${loca}`)
             }
         }
     }
