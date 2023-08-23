@@ -8,7 +8,7 @@ const CardItem = (props) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        navi(`cards/${card.id}`)
+        navi(`${card.id}`)
     }
 
     return (

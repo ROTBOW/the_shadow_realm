@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, Redirect, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import Navbar from './navbar/navbar'
 import Splash from './splash/splash_page';
