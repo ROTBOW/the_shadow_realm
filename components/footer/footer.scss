@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+
+    position: fixed;
+    bottom: 0;
+
+    border-top: black solid 1px;
+    background-color: #555250;
+    padding: 1rem 0 1rem 0; 
+    color: lightgray;
+    width: 100%;
+
+    b {
+        font-weight: bold;
+    }
+
+    a {
+        color: rgb(0, 200, 200);
+        text-decoration: underline;
+        &:hover {
+            color: cyan;
+        }
+    }
+}
