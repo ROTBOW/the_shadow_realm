@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
-import Navbar from './navbar/navbar'
+import Navbar from './navbar/navbar';
+import Footer from './footer/footer';
 import Splash from './splash/splash_page';
 import Card_Index from './cards_index/cards_index';
 import RandomCard from './random_card/random_card';
@@ -25,6 +26,7 @@ class App extends React.Component {
                         <Route path='/splash' element={<Splash/>}/>
                         <Route path="*" element={ <Navigate to='/splash' replace/>}/>
                     </Routes>
+                    <Footer/>
                 </div>
         )
     }

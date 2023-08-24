@@ -22,7 +22,7 @@ const Splash = () => {
         timerId = setInterval(()=>{
             let time;
             setAngl( angl => {
-                time = (angl < 1440) ? angl+180: 0
+                time = (angl < 1440) ? angl+180 : 0
                 return time
             });
             if (![360, 720, 1080, 1440].includes(time)) {
@@ -36,7 +36,7 @@ const Splash = () => {
 
     const goToCard = (e) => {
         e.preventDefault();
-        navi(`cards/${card.id}`)
+        navi(`/cards/${card.id}`)
     }
 
     
@@ -48,8 +48,7 @@ const Splash = () => {
                 <div className="splash-text-box">
                     <h2>Welcome to the Shadow Realm</h2>
                     <p>
-                        The Shadow Realm is a Yu-Gi-Oh card repository made possible
-                        by the <a href='https://db.ygoprodeck.com/'>YGOPRODeck</a> API.
+                        The Shadow Realm is a Yu-Gi-Oh card repository made in my free time for fun!
                     </p>
                 </div>
                 <div className="splash-card-container">
