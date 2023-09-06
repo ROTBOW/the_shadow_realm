@@ -1,14 +1,17 @@
 import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
-import Navbar from './navbar/navbar';
-import Footer from './footer/footer';
-import Splash from './splash/splash_page';
-import Card_Index from './cards_index/cards_index';
-import RandomCard from './random_card/random_card';
-import ShowCard from './show_card/show_card';
+// running components
+import Navbar from './running_components/navbar/navbar';
+import Footer from './running_components/footer/footer';
+
+
+import Splash from './main_components/splash/splash_page';
+import Card_Index from './card_components/cards_index/cards_index';
+import RandomCard from './card_components/random_card/random_card';
+import ShowCard from './card_components/show_card/show_card';
 // import Search from './search/search'
-import Jimbo from './jimbo/jimbo';
+import Jimbo from './main_components/jimbo/jimbo';
 
 
 class App extends React.Component {

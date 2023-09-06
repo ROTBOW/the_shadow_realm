@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router';
-import Loading from '../loading/loading'
+import Loading from '../../util_components/loading/loading'
 import axios from "axios";
 import './splash.scss';
 

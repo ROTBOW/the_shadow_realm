@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router';
-import Search from '../search/search';
+import Search from '../../main_components/search/search';
 import './navbar.scss';
 
 const Navbar = (props) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../image/image';
+import Image from '../../util_components/image/image';
 import './card.scss';
 
 const fillLvl = level => {

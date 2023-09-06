@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './cards_index.scss';
-import Loading from '../loading/loading';
+import Loading from '../../util_components/loading/loading';
 import CardItem from './card_item';
 import axios from 'axios';
 
