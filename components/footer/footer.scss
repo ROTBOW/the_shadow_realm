@@ -1,4 +1,5 @@
 .footer {
+
     display: flex;
     justify-content: space-around;
 
@@ -22,4 +23,8 @@
             color: cyan;
         }
     }
+}
+
+.footer-spacer {
+    height: 50px;
 }
